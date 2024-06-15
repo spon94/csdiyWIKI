@@ -1,6 +1,7 @@
 # vim turtorial
 
-> 学习参考自 https://github.com/iggredible/
+> ref_1: https://github.com/iggredible/
+> ref_2: https://gitlab.com/wsdjeg/Learn-Vim_zh_cn
 
 ## Chapter 01
 
@@ -152,14 +153,81 @@ gT
 
 ### Path
 
+## Chapter 04
+
+### 语法规则
+
+vim 语法规则：
+
+```zsh
+# 动词 + 名词
+verb + noun
+```
+
+### 名词（动作 Motion）
+
+- 动作用来在 Vim 中移动
+
+```zsh
+h
+j
+k
+l
+w
+}   下一个段落
+$   当前行行尾
+```
+
+### 动词（操作符 Operation）
+
+```zsh
+y   # yank(yank后，使用p粘贴到光标后，P粘贴到光标前)
+d   # delete
+c   # change
+```
+
+### 动词 + 名词
+
+- 复制当前位置到行尾的所有内容：      `y$`
+- 删除当前位置到下一个单词的开头：    `dw`
+- 修改当前位置到这个段落的结尾：      `c}`
+
+> motion 接受数字作为参数
+
+- 向左拷贝两个字符：    `y2h`
+- 删除后两个单词：      `d2w`
+- 修改后面两行：        `c2j`
+
+> Vim 支持通过按两次 Operation 使它执行行级操作（dd,yy,cc）
+
+### 更多名词（文本对象 Text Object）
+
+> 针对括号等结构化内容进行操作
+
+- 文本对象可以被 Operation 使用，有两类文本对象
+
+```zsh
+i + object # 内部文本对象
+a + object # 外部文本对象
+```
+
+- 内部文本对象：不包括包围文本对象的空白或括号等
+- 外部文本对象：包括了包围内容的空白或括号等对象
 
 
+(hello vim)
 
+   sss  (hello vim) sss
+(hello vim)
+(hello vim)
+(hello vim)
+(hello vim)
+(hello vim)
 
-
-
-
-
+const hello = function() {
+    console.log("Hello Vim");
+    return true;
+}
 
 
 
