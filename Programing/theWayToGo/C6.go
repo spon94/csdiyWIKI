@@ -79,9 +79,9 @@ package main
 import "fmt"
 
 func main(){
-	res := fibonaci()
+	res := fibonaci(1)
 	for i := 0; i <= 10; i ++{
-		fmt.Println("index: %d, value: %d", i, res(i))
+		fmt.Printf("index: %d value: %d\n", i, res(i))
 	}
 }
 
